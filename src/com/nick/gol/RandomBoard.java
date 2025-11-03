@@ -15,4 +15,19 @@ public class RandomBoard extends GameBoard{
         }
 
     }
+
+
+    @Override
+    public void printBoard() {
+        for (int idx = 0; idx < this.height; idx++) {
+            for (int idy = 0; idy < this.width; idy++) {
+                if (this.getCell(idx, idy).getIsAlive()) {
+                    System.out.print("▲ ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println("");
+        }
+    }
 }
